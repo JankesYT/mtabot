@@ -20,31 +20,23 @@ client.on("message", async message => {
         const command = args.shift().toLowerCase();
 
         if (command == 'encode') {
-            var key1 = config.key1;
-            var key2 = config.key2;
-            var key3 = config.key3;
-            var key4 = config.key4;
             if (args.length < 1) {
                 return message.channel.send('Please specify an argument! For example: **!encode SuperSecretPass123**.')
             }
-            var encoded1 = tea.encode(args.join(' '), key1);
-            var encoded2 = tea.encode(args.join(' '), key2);
-            var encoded3 = tea.encode(args.join(' '), key3);
-            var encoded4 = tea.encode(args.join(' '), key4);
+            var encoded1 = tea.encode(args.join(' '), config.key1);
+            var encoded2 = tea.encode(args.join(' '), config.key2);
+            var encoded3 = tea.encode(args.join(' '), config.key3);
+            var encoded4 = tea.encode(args.join(' '), config.key4);
             return message.channel.send(`**Method 1**: ${encoded1} \n**Method 2**: ${encoded2} \n**Method 3**: ${encoded3} \n**Method 4**: ${encoded4}`)
         }
         if (command == 'decode') {
-            var key1 = config.key1;
-            var key2 = config.key2;
-            var key3 = config.key3;
-            var key4 = config.key4;
             if (args.length < 1) {
                 return message.channel.send('Please specify an argument! For example: **!decode oAEB59aC9jLJI4nD+ybnnrAvJm4/yFYS**.')
             }
-            var decoded1 = tea.decode(args[0], key1);
-            var decoded2 = tea.decode(args[0], key2);
-            var decoded3 = tea.decode(args[0], key3);
-            var decoded4 = tea.decode(args[0], key4);
+            var decoded1 = tea.decode(args[0], config.key1);
+            var decoded2 = tea.decode(args[0], config.key2);
+            var decoded3 = tea.decode(args[0], config.key3);
+            var decoded4 = tea.decode(args[0], config.key4);
             if(!decoded1) {
                 return message.channel.send('You provided wrong encoded password!')
             }
