@@ -6,3 +6,5 @@ Simple MTASA Bot with encode and decode function for non authorial servers.
 3. Run terminal in Bot folder.
 4. Type: npm i
 5. Type: node .
+
+NOTE: You will find token at: https://discord.com/developers/applications/
