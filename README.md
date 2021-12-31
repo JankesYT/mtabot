@@ -1,5 +1,5 @@
 # mtaBot
-Simple MTASA Bot with encode and decode function for non authorial servers.
+Simple MTASA Bot with encode and decode function for PSEUDOLE.
 # Setting up Bot
 1. Copy repository.
 2. Paste your Bot token in config.json. You can also change keys and prefix.
